@@ -1,0 +1,16 @@
+---
+  - name: "Linux Machine setup"
+    hosts: localhost
+    connection: local 
+
+    roles:
+      - chrome
+      - github
+      - go
+      - nmap
+      - nvim
+      - spotify
+      - vscode
+      - zsh
+      - tmux
+      

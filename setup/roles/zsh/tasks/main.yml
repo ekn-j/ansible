@@ -1,0 +1,5 @@
+---
+  - name: "Installing ZSH"
+    ansible.builtin.dnf:
+      name: zsh
+      state: latest

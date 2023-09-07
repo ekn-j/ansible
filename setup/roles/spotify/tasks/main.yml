@@ -1,0 +1,5 @@
+---
+  - name: "Installing Spotify"
+    flatpak:
+      name:  com.spotify.Client
+      state: present

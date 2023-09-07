@@ -1,0 +1,9 @@
+---
+  - name: "Setting up Go"
+
+
+  - name: "Downloading go"
+
+  - name: "Extracting go"
+
+  - name: "Setting go path"

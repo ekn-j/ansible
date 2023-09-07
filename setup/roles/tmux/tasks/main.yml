@@ -1,0 +1,5 @@
+---
+  - name: "Installing tmux"
+    ansible.builtin.dnf:
+      name: tmux
+      state: latest

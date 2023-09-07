@@ -1,0 +1,5 @@
+---
+  - name: "Installing nmap"
+    ansible.builtin.dnf:
+      name: nmap
+      state: latest
