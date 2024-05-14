@@ -2,7 +2,7 @@
   - name: "Linux Machine setup"
     hosts: localhost
     connection: local 
-
+    become: yes
     roles:
       - chrome
       - github
