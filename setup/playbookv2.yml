@@ -1,0 +1,26 @@
+---
+- name: Install roles based on OS
+  hosts: localhost
+  connection: local
+  gather_facts: yes
+
+  vars:
+    git_username: "Your Name"
+    git_email: "youremail@example.com"
+
+  tasks:
+    - name: Install macOS roles
+      include_role:
+        name: "{{ item }}"
+      loop:
+        - macos_role
+        - git_setup
+      when: ansible_distribution == 'MacOSX'
+
+    - name: Install Fedora roles
+      include_role:
+        name: "{{ item }}"
+      loop:
+        - fedora_role
+        - git_setup
+      when: ansible_distribution == 'Fedora'
