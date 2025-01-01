@@ -4,13 +4,14 @@
     connection: local 
     become: yes
     roles:
-      - chrome
-      - github
-      - go
-      - nmap
-      - nvim
-      - spotify
-      - vscode
-      - zsh
-      - tmux
-      
+    - flatpak
+    - chrome
+    #- github
+    - go
+    - nmap
+    - nvim
+    - spotify
+    - vscode
+    - zsh
+    - tmux
+     
