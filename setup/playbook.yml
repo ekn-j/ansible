@@ -6,12 +6,12 @@
     roles:
     - flatpak
     - chrome
-    #- github
-    - go
+    - git
+    - zsh
     - nmap
     - nvim
     - spotify
     - vscode
-    - zsh
+    - go
     - tmux
      

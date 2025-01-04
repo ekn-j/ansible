@@ -1,5 +1,4 @@
-
-- name: Download go tar file
+- name: download go tar file
   command: wget https://go.dev/dl/go{{version}}.linux-amd64.tar.gz
  
 - name: Delete previous installation
@@ -12,13 +11,13 @@
  
 - name: Delete downloaded tar file
   shell: rm -rf go{{version}}.linux-amd64.tar.gz*
- 
-- name: Add go binary path to ~/.profile
-  lineinfile:
-    path: ~/.profile
+
+- name: Add go binary path to .zshrc
+  ansible.builtin.lineinfile:
+    path: "/home/johannes/.zshrc"
     line: 'export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin'
-    create: true
-    state: present
- 
+    insertafter: "EOF"
+
 - name: Source updated profile and test go version
-  shell: . ~/.profile && go version
+  ansible.builtin.shell: 
+    cmd: . source /home/johannes/.zshrc && go version
